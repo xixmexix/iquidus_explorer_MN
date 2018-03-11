@@ -1,0 +1,226 @@
+body {
+  padding: 80px 40px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ /* background-image: url('/images/background2.png');*/
+}
+
+#index-search {
+	width: 80%;
+}
+
+.nav-search input {
+	width: 400px !important;
+	margin-right: 5px;	
+}
+
+.view_tx {
+	text-align: center;
+}
+
+.block-last {
+	margin: 0;
+	margin-right: 10px;
+}
+
+.block-next {
+	margin: 0;
+	margin-left: 10px;
+}
+#chart3 .jqplot-xaxis {
+	display: none;
+}
+
+.data {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+
+.txid {
+	width: 100%;
+	display:block;
+	overflow: hidden;
+}
+
+.mono {
+	font-family: 'Overpass Mono', monospace;
+}
+
+.panel-address-summary {
+ margin-bottom: 5px;
+}
+
+/* datatable tweaks */
+table {
+	width: 100% !important;
+}
+.dataTables_info, .dataTables_length {
+	padding-left: 10px;
+}
+
+.dataTables_info {
+	display: hidden !important;
+}
+
+.dataTables_length {
+	padding-top: 10px;
+}
+
+.dataTables_paginate {
+	padding-right: 5px;
+}
+
+.tab-pane {
+	margin-top: 5px;
+}
+
+table a:not(.btn),.table a:not(.btn){
+	text-decoration:none
+}
+
+tr {
+	width: 100%;
+}
+
+.footer-padding {
+	height: 50px;
+	width: 100%;
+}
+
+.summary-table {
+	margin: 0px !important;
+}
+
+#loading-icon {
+	width: 30px;
+    margin: 10px 10px;
+}
+
+.menu-text {
+	margin-left:5px;
+}
+
+#twitter-icon {
+	font-size: 20px;
+}
+.connections {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+
+#lblBlockcount {
+	margin-right: 10px;
+}
+
+#twitter-icon img{
+	width: 40px;
+	margin: 5px 5px;
+}
+
+#market_menu {
+	margin-bottom: 5px;
+}
+
+.label a:link {
+	color: #ffffff;
+}
+
+.label a:visited {
+	color: #ffffff;
+}
+
+.label a:hover {
+	color: #ffffff;
+}
+
+.label a:active {
+	color: #ffffff;
+}
+
+@media(max-width:767px){
+	body {
+		padding: 0px;
+		padding-top:60px;
+	}
+}
+
+@media(max-width:1096px){
+	.nav-search input {
+	    width: 300px !important;
+    }
+}
+
+@media(max-width:865px){
+	.nav-search input {
+	    width: 150px !important;
+    }
+}
+.qrcode {
+	position: absolute;
+	top: 65px;
+	right: 15px;
+}
+
+.footer-logo {
+	height: 40px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.panel-summary p {
+	font-size: 13px;
+	margin: 0 0 3px;
+}
+
+.panel-summary h1 {
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 0px;
+	line-height: 0.8;
+
+}
+
+.panel-summary h3 {
+	font-size: 12px;
+	color: gray;
+	margin-top: 3px;
+	margin-bottom: 0;
+}
+
+.panel-summary h5 {
+	font-size: 12px;
+	margin-top: 3px;
+	margin-bottom: 0;
+}
+
+.panel-summary .panel-body {
+	min-height: 90px;
+}
+
+.coin-info {
+
+}
+
+.coin-info h2 {
+	margin: 3px;
+	padding: 0;
+}
+
+.coin-info h5.sub {
+	margin: 0;
+	padding: 0;
+	color: #ababab;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.coin-info .info-row {
+	min-height: 100px;
+	padding-top: 10px;
+	margin: 10px;
+}
+
+.coin-info .row.earnings {
+	margin-bottom: 5px;
+}

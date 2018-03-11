@@ -1,0 +1,52 @@
+extends layout
+
+block content   
+  script.
+    $(document).ready(function(){
+      console.log('masternodes table');
+      var ctable = $('#masternodes-table').dataTable( {
+        autoWidth: true,
+        searching: true,
+        ordering: true,
+        responsive: true,
+        lengthChange: true,
+        processing: false,
+        bPaginate: true,
+        pageLength: 25,
+        order: [[ 3, "desc" ]],
+        ajax: {
+          url: '/ext/masternodes',
+          dataSrc: function ( json ) {
+            for ( var i=0;i<json.data.length; i++ ) {
+              json.data[i]['address'] = "<a href='/address/" + json.data[i]['address'] + "'>" + json.data[i]['address'] + "</a>";
+              json.data[i]['lastseen'] = new Date((json.data[i]['lastseen']) * 1000).toLocaleString();
+              if (json.data[i]['lastpaid'])
+                json.data[i]['lastpaid'] = new Date((json.data[i]['lastpaid']) * 1000).toLocaleString();
+              else
+                json.data[i]['lastpaid'] = '<em>not available</em>';
+            }
+            return json.data;
+          }
+        },
+        columns: [
+          { data: 'address', width: '25%', className: 'text-left' },
+          { data: 'status', width: '15%' },
+          { data: 'lastseen', width:'25%' },
+          { data: 'lastpaid', width:'25%' },
+          { data: 'ip', width: '10%', className: 'text-right' }
+        ]
+      });
+    });
+  .col-md-12(style="margin-bottom: 4%")
+    .panel.panel-default
+      .panel-heading
+        strong #{settings.locale.net_connections}
+      table#masternodes-table.table.table-bordered.table-striped
+        thead
+          tr
+            th #{settings.locale.mn_address}
+            th.text-center #{settings.locale.mn_status}
+            th.text-center #{settings.locale.mn_lastseen}
+            th.text-center #{settings.locale.mn_lastpaid}
+            th.text-right #{settings.locale.mn_ip}
+        tbody.text-center
